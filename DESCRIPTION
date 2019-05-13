@@ -2,7 +2,7 @@ Package: reconqdata
 Title: RECON project: Qualitative Data
 Version: 0.1.0
 Authors@R: c(
-    person("Michal", "Bojanowski", role=c("aut", "cre"), email="michal2992@gmail.com", comment=c(ORCID="0000-0001-7503-852X"))
+    person("Michal", "Bojanowski", role=c("aut", "cre"), email="michal2992@gmail.com", comment=c(ORCID="0000-0001-7503-852X")),
     person("Dominika", "Czerniawska", role="aut"),
     person("Wojciech", "Fenrich", role="aut"),
     person("National Science Centre", role="fnd")
@@ -13,3 +13,4 @@ Depends: R (>= 3.6.0)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown=TRUE)
