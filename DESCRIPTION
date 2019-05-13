@@ -1,8 +1,14 @@
 Package: reconqdata
-Title: What the Package Does (one line, title case)
+Title: RECON project: Qualitative Data
 Version: 0.1.0
-Authors@R: c(person("Michal", "Bojanowski", role=c("aut", "cre"), email="michal2992@gmail.com", comment=c(ORCID="0000-0001-7503-852X")))
-Description: What the package does (one paragraph).
+Authors@R: c(
+    person("Michal", "Bojanowski", role=c("aut", "cre"), email="michal2992@gmail.com", comment=c(ORCID="0000-0001-7503-852X"))
+    person("Dominika", "Czerniawska", role="aut"),
+    person("Wojciech", "Fenrich", role="aut"),
+    person("National Science Centre", role="fnd")
+    )
+Description: Egocentric network data from a qualitative study on collaboration in science conducted in the RECON project.
+URL: https://recon.icm.edu.pl
 Depends: R (>= 3.6.0)
 License: What license is it under?
 Encoding: UTF-8
