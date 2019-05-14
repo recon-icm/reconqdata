@@ -1,5 +1,8 @@
 ---
-title: "reconqdata"
+title: "Academic Collaboration and Contributing Resources"
+author: "Michał Bojanowski, Dominika Czerniawska, Wojciech Fenrich"
+date: "2019-05-14"
+abstract: "An abstract here."
 output: bookdown::html_document2
 vignette: >
   %\VignetteIndexEntry{reconqdata}
@@ -9,8 +12,9 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
+  echo = FALSE,
+  error = FALSE,
+  warning = FALSE
 )
 ```
 
