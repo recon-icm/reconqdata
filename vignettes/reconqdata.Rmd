@@ -1,13 +1,17 @@
 ---
-title: "Academic Collaboration and Contributing Resources"
-author: "Michał Bojanowski, Dominika Czerniawska, Wojciech Fenrich"
-date: "2019-05-14"
+title: "Academic Collaboration and Contributing Resources^[Authors acknowledge support of National Science Centre grant 2012/07/D/HS6/01971.]"
+author: "Michał Bojanowski^[Kozminski University. Corresponding author.], Dominika Czerniawska^[University of Manchester and University of Warsaw.], Wojciech Fenrich^[University of Warsaw.]"
+date: "Draft version. Do not cite without permission"
 abstract: "An abstract here."
-output: bookdown::html_document2
+output: 
+  bookdown::word_document2: null
+  bookdown::html_document2:
+    number_sections: true
+bibliography: refs.bib
 vignette: >
   %\VignetteIndexEntry{reconqdata}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r, include = FALSE}
@@ -46,7 +50,7 @@ library(reconqdata)
 
 > How collaboration was measurewd
 
-## Measuring resource contributions
+## Resource contributions
 
 Data about resources engaged by respondents (egos) and their collaborators (alters) to every collaboration was coded based on transcripts. The coding was done with QDA Miner Lite software[^qda] and conducted by two persons. Random subsample of the interviews was double-checked by different researchers to ensure reliability.
 
@@ -91,6 +95,6 @@ Several examples of coded interview fragments are presented in Appendix \@ref(ap
 > What data frames
 > What variables
 
-
+# Examples
 
 # References
