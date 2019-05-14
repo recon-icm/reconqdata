@@ -4,6 +4,11 @@ Michał Bojanowski (Kozminski Univeristy), Dominika Czerniawska
 (University of Manchester and University of Warsaw), Wojciech Fenrich
 (University of Warsaw)
 
+  - [Download links](#download-links)
+  - [Installation](#installation)
+  - [Example](#example)
+  - [Acknowledgements](#acknowledgements)
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 <!-- badges: start -->
@@ -13,6 +18,10 @@ status](https://travis-ci.org/recon-icm/reconqdata.svg?branch=master)](https://t
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/recon-icm/reconqdata?branch=master&svg=true)](https://ci.appveyor.com/project/recon-icm/reconqdata)
 <!-- badges: end -->
+
+-----
+
+This is a dataset
 
 Data model:
 

@@ -1,7 +1,9 @@
 ---
 title: "Data from a qualitative study on collaboration in science"
 author: "Michał Bojanowski (Kozminski Univeristy), Dominika Czerniawska (University of Manchester and University of Warsaw), Wojciech Fenrich (University of Warsaw)"
-output: github_document
+output: 
+  github_document:
+    toc: true
 editor_options: 
   chunk_output_type: console
 ---
@@ -24,6 +26,11 @@ knitr::opts_chunk$set(
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/recon-icm/reconqdata?branch=master&svg=true)](https://ci.appveyor.com/project/recon-icm/reconqdata)
 <!-- badges: end -->
 
+---
+
+
+
+This is a dataset 
 
 
 
@@ -69,7 +76,4 @@ library(reconqdata)
 
 ## Acknowledgements
 
-Authors thank (Polish) [National Science Centre](https://ncn.gov.pl) for
-support through SONATA grant 2012/07/D/HS6/01971 for the project *Dynamics of
-Competition and Collaboration  in Science: Individual Strategies, Collaboration
-Networks, and Organizational Hierarchies* (http://recon.icm.edu.pl).
+Authors thank (Polish) [National Science Centre](https://ncn.gov.pl) for support through SONATA grant 2012/07/D/HS6/01971 for the project *Dynamics of Competition and Collaboration  in Science: Individual Strategies, Collaboration Networks, and Organizational Hierarchies* (http://recon.icm.edu.pl).
