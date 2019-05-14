@@ -1,6 +1,6 @@
 ---
 title: "reconqdata"
-output: rmarkdown::html_vignette
+output: bookdown::html_document2
 vignette: >
   %\VignetteIndexEntry{reconqdata}
   %\VignetteEngine{knitr::rmarkdown}
@@ -17,3 +17,76 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(reconqdata)
 ```
+
+# Introduction
+
+> Motivation
+> Incentives for collaboration
+
+
+
+# Data collection
+
+> Sample selection
+> 
+
+
+# Measurement
+
+## Attributes
+
+> How attributes are measured
+
+
+## Collaboration networks
+
+> How collaboration was measurewd
+
+## Measuring resource contributions
+
+Data about resources engaged by respondents (egos) and their collaborators (alters) to every collaboration was coded based on transcripts. The coding was done with QDA Miner Lite software[^qda] and conducted by two persons. Random subsample of the interviews was double-checked by different researchers to ensure reliability.
+
+[^qda]: https://provalisresearch.com/products/qualitative-data-analysis-software/
+
+Resources engaged in collaborations were coded with a coding scheme covering different elements of a research process in different disciplines. The coding scheme consisted of the following categories:
+
+- 'Conceptualisation' - Coming up with an idea for a study, providing general theoretical framework; designing a general framework for a study;
+- 'Methodology' - Designing methodology for a study;
+- 'Investigation' - Conducting research, gathering data;
+- 'Data analysis' - Data analysis, quantitative as well as qualitative;
+- 'Data curation' - Managing and archiving data;
+- 'Software creation' - Writing software for research process;
+- 'Prototype construction'  - Building a prototype that is used in research process;
+- 'Knowledge' - Knowledge oriented help in research process but not falling into any of the above categories.
+
+Coding scheme also includes different tangible and intangible resources, which might be controlled by scientists. The list of resources was built upon a literature review. 
+
+- 'Funding acquisition' - The increasing role of ability to secure funding was underlined in many studies on contemporary science [@resnik2006price; @mirowski2011science]. 
+- 'Writing' and 'Proofreading' - The role of written forms of knowledge was summarized by @bazerman1983scientific. It is one of the most important activities in science [@popper1972objective; @merton1973sociology].
+- Administration - It is one of the main factors interfering with scholarship [@blau1994organization]. It can be groped into:
+    + 'Project administration' - Administrative work over a project,
+    + 'Formal administration' - Bureaucratic work is a result of managing complex scientific institutions. 
+- 'Data' - A large part of scientific work is organised around tangible resources such as data or documents [@latour2013laboratory]. The category consist of different types of data which can be used in scientific work: qualitative, quantitative, literature reviews.
+- 'Equipment' - @hagstrom1964traditional and @cetina2009epistemic indicated the crucial role of technology and scientific equipment in shaping scientific collaborations and scientific practices including centralisation of collaboration in some disciplines. 
+- Contacts - The role of social contacts surrounding in the production of knowledge has been underlined in vast literature (e.g. @collins1974tea) According to literature we can group contacts into two categories
+    + 'Contacts in academia' [@bellotti2012getting],
+    + 'Contacts outside academia' [@powell2012open].
+- 'Supervision' -  A master-student relation is the most traditional collaboration in academia. It has a significant impact on a career in academia [@wagner2011becoming; @zuckerman1967nobel].
+- Position in academia
+    + 'Prestige' - @bourdieu1988homo indicated that the symbolic power was the main driver for an accumulation of different goods in academia. Some collaboration might be attractive because they are seen as prestigious. 
+    + 'Formal achievements' - Contemporary science has developed many forms of formal accountability, where achievements are measured according to designed indicators such as a list of publications.
+- 'Character traits'- Scientific collaboration like any other teamwork is affected by collaboration skills and traits of character of all parties engaged. The literature on individual traits of character and scientific collaboration is extremely limited except some research on the role of collaborative skills in academia-industry collaboration [@siegel2003commercial]. 'Character traits', which include different aspects of collaboration like being agreeable, reliable, or organized might be an important characteristic of a potential collaborator. 
+- 'Motivation' - One of character traits, which does not affect collaboration directly but is of great importance in academic setting [@gatfield2005investigation].
+- 'Career development'- The studies of scientific biographies also raise questions about breakthrough moments in scientific careers. Research on contemporary Polish science indicates that for many scientists it was exposure to international science. It was usually enabled by collaborators who helped them to get international scholarships, give access to some rare data or training or wrote a recommendation letter [@marta_anatomia_2015]. 
+- 'Other input' - Many scientific collaborations have a unique character. As a result, some resources are very specific to the local background. To avoid excessive fragmentation of the coding scheme, we have decided to introduce a category that will encounter for the resources unique for particular resources across all interviews. 
+
+Several examples of coded interview fragments are presented in Appendix \@ref(appendix-coding).
+
+# Data files
+
+> What data frames
+> What variables
+
+
+
+# References
