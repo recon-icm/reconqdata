@@ -10,6 +10,8 @@ Michał Bojanowski (Kozminski Univeristy), Dominika Czerniawska
 
 [![Travis build
 status](https://travis-ci.org/recon-icm/reconqdata.svg?branch=master)](https://travis-ci.org/recon-icm/reconqdata)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/recon-icm/reconqdata?branch=master&svg=true)](https://ci.appveyor.com/project/recon-icm/reconqdata)
 <!-- badges: end -->
 
 Data model:
