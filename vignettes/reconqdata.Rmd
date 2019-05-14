@@ -1,12 +1,12 @@
 ---
 title: "Academic Collaboration and Contributing Resources^[Authors acknowledge support of National Science Centre grant 2012/07/D/HS6/01971.]"
 author: "Michał Bojanowski^[Kozminski University. Corresponding author.], Dominika Czerniawska^[University of Manchester and University of Warsaw.], Wojciech Fenrich^[University of Warsaw.]"
-date: "Draft version. Do not cite without permission"
-abstract: "An abstract here."
+date: "Draft version `r Sys.Date()`. Do not cite without permission of the authors."
+abstract: "This is egocentric data on collaboration in science."
 output: 
-  bookdown::word_document2: null
   bookdown::html_document2:
     number_sections: true
+  bookdown::word_document2: null
 bibliography: refs.bib
 vignette: >
   %\VignetteIndexEntry{reconqdata}
@@ -28,15 +28,15 @@ library(reconqdata)
 
 # Introduction
 
-> Motivation
+> Motivation;
+> Beyond coathorship;
 > Incentives for collaboration
 
 
 
-# Data collection
+# Sample
 
 > Sample selection
-> 
 
 
 # Measurement
