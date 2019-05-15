@@ -4,9 +4,12 @@ Michał Bojanowski (Kozminski Univeristy), Dominika Czerniawska
 (University of Manchester and University of Warsaw), Wojciech Fenrich
 (University of Warsaw)
 
+  - [Data structure](#data-structure)
+      - [Node data](#node-data)
+      - [Collaboration networks](#collaboration-networks)
+      - [Resource “flow” networks](#resource-flow-networks)
   - [Download links](#download-links)
   - [Installation](#installation)
-  - [Example](#example)
   - [Acknowledgements](#acknowledgements)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -21,13 +24,32 @@ status](https://ci.appveyor.com/api/projects/status/github/recon-icm/reconqdata?
 
 -----
 
-This is a dataset
+This is a dataset built from a qualitative study of 40 Individual
+in-Depth Interviews (IDI) conducted in the period April-August of 2016
+as a part of the [RECON](recon.icm.edu.pl) project on collaboration in
+Polish science. This repository is an R package, but the data is also
+stored in portable CSV format so that it can be used with any other
+analytical software.
 
-Data model:
+## Data structure
 
-``` r
-reconqdata:::plot_data_model()
-```
+The data is contained in three tables as shown in the diagram below:
+
+    #> Registered S3 methods overwritten by 'ggplot2':
+    #>   method         from 
+    #>   [.quosures     rlang
+    #>   c.quosures     rlang
+    #>   print.quosures rlang
+
+![](man/figures/README-data-model.png)
+
+### Node data
+
+The `nodes` data frame has
+
+### Collaboration networks
+
+### Resource “flow” networks
 
 ## Download links
 
@@ -47,15 +69,6 @@ This is an R package so you can install it directly from GitHub using:
 
 ``` r
 remotes::install_github("recon-icm/reconqdata")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(reconqdata)
-## basic example code
 ```
 
 ## Acknowledgements

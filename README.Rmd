@@ -12,6 +12,8 @@ editor_options:
 
 ```{r, include = FALSE}
 library(reconqdata)
+library(magrittr)
+requireNamespace("datamodelr")
 
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -30,17 +32,41 @@ knitr::opts_chunk$set(
 
 
 
-This is a dataset 
+This is a dataset built from a qualitative study of 40 Individual in-Depth Interviews (IDI) conducted in the period April-August of 2016 as a part of the [RECON](recon.icm.edu.pl) project on collaboration in Polish science. This repository is an R package, but the data is also stored in portable CSV format so that it can be used with any other analytical software.
 
 
+## Data structure
 
+The data is contained in three tables as shown in the diagram below:
 
-
-Data model:
-
-```{r data-model, eval=FALSE, echo=TRUE}
-reconqdata:::plot_data_model()
+```{r data-model, results="asis", echo=FALSE}
+fname <- "man/figures/README-data-model.png"
+plot_data_model() %>%
+  datamodelr::dm_render_graph(width=800) %>%
+  DiagrammeRsvg::export_svg() %>%
+  cat(file="dm.svg")
+if(!file.exists(fname)) {
+  dir.create(dirname(fname), recursive = TRUE)
+  file.create(fname)
+}
+# Write a PNG
+magick::image_read_svg("dm.svg") %>%
+  magick::image_convert(format="png") %>%
+  magick::image_write(path=fname)
+unlink("dm.svg")
+cat("![](", fname, ")", sep="")
 ```
+
+### Node data
+
+The `nodes` data frame has
+
+### Collaboration networks
+
+### Resource "flow" networks
+
+
+
 
 
 ## Download links
@@ -63,14 +89,6 @@ remotes::install_github("recon-icm/reconqdata")
 
 
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(reconqdata)
-## basic example code
-```
 
 
 
