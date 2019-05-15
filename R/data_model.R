@@ -2,7 +2,7 @@
 #'
 #' @export
 plot_data_model <- function() {
-  requireNamespace("datamodelr")
+  suppressMessages(requireNamespace("datamodelr"))
   datamodelr::dm_create_graph(
     data_model(),
     rankdir="BT",
@@ -16,7 +16,14 @@ plot_data_model <- function() {
 
 data_model <- function() {
   requireNamespace("datamodelr")
-  dm <- datamodelr::dm_from_data_frames(collaboration, nodes, resources)
+  collaboration <- reconqdata::collaboration
+  nodes <- reconqdata::nodes
+  resources <- reconqdata::resources
+  dm <- datamodelr::dm_from_data_frames(
+    collaboration,
+    nodes,
+    resources
+  )
   datamodelr::dm_add_references(
     dm,
     resources$id_interview == nodes$id_interview,
