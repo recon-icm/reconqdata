@@ -1,7 +1,7 @@
 ---
-title: "Academic Collaboration via Resource Contributions^[Authors thank (Polish) National Science Centre for support through SONATA grant 2012/07/D/HS6/01971 for the project Dynamics of Competition and Collaboration in Science: Individual Strategies, Collaboration Networks, and Organizational Hierarchies (http://recon.icm.edu.pl).]"
+title: "Academic Collaboration via Resource Contributions: An Egocentric Dataset^[Authors thank (Polish) National Science Centre for support through SONATA grant 2012/07/D/HS6/01971 for the project Dynamics of Competition and Collaboration in Science: Individual Strategies, Collaboration Networks, and Organizational Hierarchies (http://recon.icm.edu.pl).]"
 author: "Michał Bojanowski^[Kozminski University. Corresponding author.], Dominika Czerniawska^[University of Manchester and University of Warsaw.], Wojciech Fenrich^[University of Warsaw.]"
-date: "Draft version `r Sys.Date()`. Do not cite without permission of the authors."
+date: "Draft version. Do not cite without permission of the authors."
 abstract: "This is egocentric data on collaboration in science."
 output: 
   bookdown::html_document2:
@@ -59,7 +59,7 @@ Respondents were asked to name up to 10 important collaborators during last 5 ye
 
 During the interview a network of collaboration among collaborators mentioned in (1) was reconstructed using corkboard, pins, and rubber bands. The corkboards were photographed and later digitized into the `collaboration` table described below.
 
-```{r corkboard, fig.cap="Using coekboard, pins, and rubber bands to collect data on collaborations."}
+```{r corkboard, fig.cap="Using corkboard, pins, and rubber bands to collect data on collaborations. Small cards contained names or nicknames which have been masked."}
 knitr::include_graphics("cork.jpg")
 ```
 
