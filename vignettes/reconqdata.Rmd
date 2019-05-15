@@ -1,20 +1,25 @@
 ---
-title: "Academic Collaboration and Contributing Resources^[Authors acknowledge support of National Science Centre grant 2012/07/D/HS6/01971.]"
+title: "Academic Collaboration via Resource Contributions^[Authors thank (Polish) National Science Centre for support through SONATA grant 2012/07/D/HS6/01971 for the project Dynamics of Competition and Collaboration in Science: Individual Strategies, Collaboration Networks, and Organizational Hierarchies (http://recon.icm.edu.pl).]"
 author: "Michał Bojanowski^[Kozminski University. Corresponding author.], Dominika Czerniawska^[University of Manchester and University of Warsaw.], Wojciech Fenrich^[University of Warsaw.]"
 date: "Draft version `r Sys.Date()`. Do not cite without permission of the authors."
 abstract: "This is egocentric data on collaboration in science."
 output: 
   bookdown::html_document2:
     number_sections: true
-  bookdown::word_document2: null
+  bookdown::word_document2: default
 bibliography: refs.bib
 vignette: >
   %\VignetteIndexEntry{reconqdata}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
 
-```{r, include = FALSE}
+```{r setup, include = FALSE}
+library(reconqdata)
+library(dplyr)
+
 knitr::opts_chunk$set(
   echo = FALSE,
   error = FALSE,
@@ -22,35 +27,49 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(reconqdata)
-```
 
 # Introduction
 
 > Motivation;
-> Beyond coathorship;
-> Incentives for collaboration
+> Research questions
 
 
 
 # Sample
 
-> Sample selection
+Data comes from `r sum(nodes$is_ego)` Individual in-Depth Interviews (IDI) conducted between April and August 2016 by two interviewers. The quota sample consists of 20 female and 20 male scientists from six Polish cities. Respondents represented a broad range of disciplines: natural sciences, social sciences, life sciences, the humanities, engineering, and technology on different levels of career from PhD candidates to professors. The interviewees mentioned `r sum(!nodes$is_ego)` collaborators in total. Interviews lasted between 24 and 90 minutes were recorded and later transcribed.
+Each interview consisted of several parts three of which are of relevance here:
+
+1. Respondents were asked to name up to 10 important researchers they have collaborating with during last 5 years. Each collaborator was discussed separately resulting with information about gender, scientific degree, nationality, and university department (if possible).
+2. During the interview a network of collaboration among collaborators mentioned in (1) was reconstructed using corkboard, pins, and rubber bands. See the example in Figure \@ref(fig:corkboard). Corkboards were photographed and later digitized into edgelist data.
+3. For each collaborator the respondent was asked about academically-relevant resources he/she contributed to the collaboration and what resources were contributed by the collaborator. The text of the transcripts was analyzed using QDA Miner Lite^[A product of Provalis Research, see https://provalisresearch.com/products/qualitative-data-analysis-software/ .] in order to code resources engaged by respondents (the egos) and their collaborators (the alters) to every collaboration. The coding was performed by two persons. Random sample of the interviews was double-checked by different researchers to ensure reliability.
+
+While collaboration networks assembled from part (2) include alter-alter ties, the data on resources from part (3) was acquired for ego-alter dyads only.
+
 
 
 # Measurement
 
 ## Attributes
 
-> How attributes are measured
+Respondents were asked to name up to 10 important collaborators during last 5 years. Each collaborator was discussed separately resulting with information about gender, scientific degree, nationality, and university department (if possible). Collected data is available in the `nodes` table described below.
 
 
 ## Collaboration networks
 
-> How collaboration was measurewd
+During the interview a network of collaboration among collaborators mentioned in (1) was reconstructed using corkboard, pins, and rubber bands. The corkboards were photographed and later digitized into the `collaboration` table described below.
+
+```{r corkboard, fig.cap="Using coekboard, pins, and rubber bands to collect data on collaborations."}
+knitr::include_graphics("cork.jpg")
+```
+
+
+> How collaboration was measured
 
 ## Resource contributions
+
+For each collaborator the respondents were asked about academically-relevant resources he/she contributed to the collaboration and what resources were contributed by the collaborator. Interviews were audio-recorded and later transcribed. The text of the transcripts was analyzed using QDA Miner Lite^[A product of Provalis Research, see https://provalisresearch.com/products/qualitative-data-analysis-software/ .] in order to code resources engaged by respondents (the egos) and their collaborators (the alters) to every collaboration. The coding was performed by two persons. Random sample of the interviews was double-checked by different researchers to ensure reliability. The data is available in table `resources` and described in detail below.
+
 
 Data about resources engaged by respondents (egos) and their collaborators (alters) to every collaboration was coded based on transcripts. The coding was done with QDA Miner Lite software[^qda] and conducted by two persons. Random subsample of the interviews was double-checked by different researchers to ensure reliability.
 
@@ -90,11 +109,188 @@ Coding scheme also includes different tangible and intangible resources, which m
 
 Several examples of coded interview fragments are presented in Appendix \@ref(appendix-coding).
 
-# Data files
 
-> What data frames
-> What variables
 
-# Examples
+# Selected descriptives
+
+```{r desc-freqs, R.options=list(knitr.kable.NA="--")}
+nodes %>%
+  count(female, scidegree, is_ego) %>%
+  tidyr::spread(is_ego, n) %>%
+  knitr::kable(
+    caption = "Frequencies of gender and scientific degree."
+  )
+```
+
+
+
+
+# Accessing the data
+
+The data is available in a GitHub repository at https://github.com/recon-icm/reconqdata as an R package with accessible files in a CSV format. Users can use the data with R by installing the package or download the data files in CSV format using URLs provided in the README file.
+
+
+# Examples of resource codes
+
+Conceptualisation:
+
+* We write equations together. I give him ideas. (Interview 217)
+
+* He brings ideas. He has a lot of them and they are fascinating. (Interview 213)
+
+Methodology:
+
+* I have all the optical measurements from them. [...] We complement each other in research methods that are accessible in our institution. My team can do some microscopic measurements. (Interview 226)
+
+* He gave me some tips when I was taking the measurements like what will match, how I could find something, how it will match. He also taught me one method. (Interview 214)
+
+Investigation:
+
+* His input is significant. I cannot collect samples without him. (Interview 211)
+
+* I usually ask for observations, which I handle myself later on. (Interview 216)
+
+
+Data analysis
+
+* They provide me with data and I analyse it. (Interview 216)
+
+* Sometimes I don't have time to look at charts and so forth. I collect the 'life' data and ask my colleague to compute it and to check the results. (Interview 219)
+
+Data curation:
+
+* She wanted me to manage the whole process from building a data set to analysing it. (Interview 212)
+
+* I was looking for someone to get the files in order to digitalise them. The files have over 3 million records, 3 million card records so obviously she did not do it herself. (Interview 227)
+
+
+Software creation: 
+
+* He was a specializt in computer stuff. Yes? All things like that, software etc. I manged to do it myself when it was relatively easy. I'm rather a loner - the majority of my work I did alone. I started collaboration before habilitation and I invited him. It was the right choice as I've recently learned. We were invited to take part in an international contest. (Interview 220)
+
+* He did the 'programming machinery'. Thanks to that our system works. (Interview 227)
+
+Prototype construction:
+
+* They are strong in design. [...] in this project. (Interview 221)
+
+
+Knowledge:
+
+* We talk, you know. Sometimes it is a brain storm. For example, if there is a call for abstract, we consult it. [I think] I don't fit in here, because I have nothing to say in this area. At least I think so. [She says:] Oh, look! Do this and this. And I will focus on something else. We meet half way. Or when we host a conference [...] I give her suggestions to analyse something. Maybe she would have interesting results. These are creative, inspiring meetings. (Interview 218)
+
+* He is an older gentlemen with very broad knowledge about the field when it comes to methods, ideas [...] one could address. (Interview 225)
+
+
+Funding acquisition:
+
+* It was my grant and I invited them. Now it is the other way round. They have a grant and I was invited. (Interview 224)
+
+* I paid him something. He analysed things for me. (Interview 217)
+
+
+Data and other sources:
+
+* It is appreciated to have an extensive collection of samples that could be used in experiments. I mentioned once during a conversation that I had a lot of samples, which could be utilized. (Interview 211) 
+
+* It was material of great value that I had access to and the aspects I learned about and investigated as well. (Interview 222)
+
+Equipment:
+
+* So I came here, because I was needed. There was a laboratory but there was no one, who could take it over and do this kind of research. (Interview 205)
+
+* I don't have access here to the equipment I use. I work in conditions like this, so I very much need it. (Interview 203)
+
+Supervision:
+
+* I am a supervisor of Mr. A and Ms. B. (Interview 209)
+
+* He is my PhD student. I met him when he was a student, and then he came to me. (Interview 217)
+
+Drafts:
+
+* If he brings something intellectual, I can't see a reason why I should buy it and assume it is mine. Right? Only because I paid for it. So I added him as a co-author. (Interview 211)
+
+* The things we prepared, the drafts... We sent them to him. (Interview 226)
+
+Proofreading:
+
+* So with these books, my input is proofreading. (Interview 223)
+
+* So he tells me what he can do, what I should do, what I should correct. (Interview 214)
+
+
+Contacts in academia:
+
+* If we want to use some equipment and he knows someone who has it, he recommends us. If he wants something, I recommend him as well so he can use it. (Interview 211)
+
+* He promised at once to give me some names, emails, and phone numbers [...] and I invited these people. (Interview 223)
+
+* We collaborate internationally very intensively. We do visit to many places. We host people and these are really the top people in our field in the world. I think they would not get it at some other place. (Interview 224)
+
+Contacts outside of academia:
+
+* Thanks to her we have many contacts among practitioners. (Interview 212)
+
+* She gives us mostly a lot of recognition in this environment and her name opens many doors. Thanks to her we found all those people, we would not have found otherwise. She was our bridge to this group. (Interview 224)
+
+Project administration
+
+* He manages a project. I smile because one has to do some paper work. (Interview 203)
+
+* We finished a project, where she was one of a leaders managing the project. (Interview 209)
+
+Formal administration:
+
+* She is our unit leader. She initiates many projects [...]. She informs us about conferences and she encourages us to take part. She initiates research [...] (Interview 207)
+ 
+* Professor is our boss so all financial matters. She is the unite leader. (Interview 208)
+ 
+Motivation:
+
+* I met him when I was finishing my master thesis. He encouraged me or motivated me to peruse academic career further. (Interview 225)
+
+* I had a student from University A. She did her engineering diploma here. She is very gifted. During one conversation she asked what should she have done later on. I said that she could apply for Master's degree and I would be her supervisor or she could try to go abroad and [...] apply for PhDs degree. (Interview 226)
+
+Traits of character:
+
+* She is on the one hand very responsible, she works very well. On the other hand, her work is excellent on the basis of merits. (Interview 215)
+
+* Professor is very communicative person. He is very friendly and his traits of character encourage collaboration. (Interview 221)
+
+Prestige:
+
+* He is the most recognised scientist in the world. He is well known scientist but older. He has some contacts and it helps in being pulled into the scientific world. (Interview 213)
+
+* They have a few good papers with names of those people. It just increases your chances. (Interview 217)
+
+Professional achievements:
+
+* At first I helped him. I gave him some contacts [...] but at some point he did it by himself [...] without my help, name and so forth. (Interview 213)
+
+* He was aboard for long time so he also brings academic achievements. (Interview 205)
+
+* When we apply for funding, he brings himself. (Interview 206)
+
+
+Other characteristics:
+
+* I don't know a lot about the issue but she said that she needed someone from the other side of the country to conduct the research in companies so the results could be compared. (Interview 202)
+
+* It was funding for Polish-German partnership. I was looking for a partner from Germany. He is interested in these issues. Since he is one of the most recognised specializts in the field, I wrote to him asking if he would be interested in this funding. (Interview 224)
+
+Career development:
+
+* I do a lot of things to make her my successor [...]. I see her as someone, who can take it further, better. She is the youngest in the team and with no seniority but undoubtedly she has her wits gathered and she is the best based on merits. (Interview 227)
+
+* We had the discussion in March and I had due date in May. [He said] You know what? I will send you the syllabus. We have a statistical module at out department and I am sending you information how you can start improving your knowledge. You can learn here for free so you will not have to pay there. (Interview 212)
+
+Other input:
+
+* Our supervisor, PhD, deals with substantial things. He doesn't tackle any technical issues of his students or some other collaborators. He just doesn't do it. He has more important things to do. We do it instead. (Interview 230)
+
+* I bring some fresh ideas. When one has a lot of experience, she expects some things not to work out. When you don't know that it might not work out, you have this innocence, childlikeness. (Interview 214)
+
+
 
 # References
