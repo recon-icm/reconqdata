@@ -88,7 +88,6 @@ knitr::include_graphics("cork.jpg")
 
 For each collaborator the respondents were asked about academically-relevant resources he/she contributed to the collaboration and what resources were contributed by the collaborator. Interviews were audio-recorded and later transcribed. The text of the transcripts was analyzed using QDA Miner Lite^[A product of Provalis Research, see https://provalisresearch.com/products/qualitative-data-analysis-software/ .] in order to code resources engaged by respondents (the egos) and their collaborators (the alters) to every collaboration. The coding was performed by two persons. Random sample of the interviews was double-checked by different researchers to ensure reliability. The data is available in table `resources` and described in detail below.
 
-
 Data about resources engaged by respondents (egos) and their collaborators (alters) to every collaboration was coded based on transcripts. The coding was done with QDA Miner Lite software[^qda] and conducted by two persons. Random subsample of the interviews was double-checked by different researchers to ensure reliability.
 
 [^qda]: https://provalisresearch.com/products/qualitative-data-analysis-software/
