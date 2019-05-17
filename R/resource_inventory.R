@@ -1,5 +1,4 @@
-
-resource_inventory <- function() {
+resource_inventory_data <- function() {
   code_quotes %>%
     mutate(
       quote = gsub("\\(In.+\\)$", "", trimws(quote))
@@ -11,7 +10,13 @@ resource_inventory <- function() {
     left_join(
       codes,
       by = "code"
-    ) -> d
+    )
+}
+
+
+
+resource_inventory <- function() {
+  d <- resource_inventory_data()
 
   for(i in seq(1, nrow(d))) {
     with(d[i, , drop=FALSE], {
@@ -23,4 +28,24 @@ resource_inventory <- function() {
       cat("\n\n\n")
     } )
   }
+}
+
+
+
+
+
+
+resource_inventory2 <- function() {
+  d <- resource_inventory_data()
+
+  for(i in seq(1, nrow(d))) {
+    with(d[i, , drop=FALSE], {
+      cat(label, " (`", code, "`)", "\n", sep="")
+      cat(": ", text, "\n", sep="")
+      cat("\n")
+      cat(quotes)
+      cat("\n\n")
+    } )
+  }
+
 }
