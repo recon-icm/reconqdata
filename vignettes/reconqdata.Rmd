@@ -6,6 +6,8 @@ abstract: "This is egocentric data on collaboration in science."
 output: 
   bookdown::html_document2:
     number_sections: true
+  github_document:
+    toc: true
   bookdown::word_document2: default
 bibliography: refs.bib
 vignette: >
@@ -30,8 +32,24 @@ knitr::opts_chunk$set(
 
 # Introduction
 
-> Motivation;
-> Research questions
+Scientometric studies report steadily increasing trend in multi-authored scientific publications. It is clearly an evidence that contemporary science requires cooperation and is not anymore traditionally individualistic activity [@moody2004structure]. The presented dataset comes from a study in which our overarching research question was to understand why some scientist collaborate but some others do not. In particular, our approach was to think about *incentives* that might lead them to do so. Inspired by @coleman1994foundations and @lewis2012and we assume that incentives to collaborate come from academically-relevant resources the scientists possess or control and the interests they might have in resources posessed or controlled by others. For example, a theorist and an experimentalist might be interested in each other's resources -- ability to develop theoretical model of the studied problem and skills in conducting experiments respecively. Unequal distribution of these resources across academic community and necessity of pooling them to get ahead in contemporary science result in incentives to collaborate.
+
+Current state of knowledge still lacks a universally accepted behavioral understanding of the scientific process, let alone standardized tools for measuring academically-relevant resources. Hence we conducted a qualitative study among Polish scientists with the goal to:
+
+1. Collect egocentric data on collaborative relations.
+2. Develop an inventory of academically-relevant resources from respondents' reports.
+3. Measure what resources (item 2) collaborating parties (ego and alters) engage in their collaboration ties (item 1).
+
+The data we hereby share is based on transcriptions and coding of the originally qualitative material. The study involved 40 interviews conducted on a sample of Polish scientists which we describe further in Section \@ref(sample). In Section \@ref(measurement) we describe the way in which the inventory of resources was constructed. A complete list with example quotes is provided in Appendix \@ref(coding-examples). 
+
+
+
+
+
+
+
+
+
 
 
 
