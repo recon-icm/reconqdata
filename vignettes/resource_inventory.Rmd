@@ -1,0 +1,61 @@
+---
+title: "Resource inventory^[Authors thank (Polish) National Science Centre for support through SONATA grant 2012/07/D/HS6/01971 for the project Dynamics of Competition and Collaboration in Science: Individual Strategies, Collaboration Networks, and Organizational Hierarchies (http://recon.icm.edu.pl).]"
+author: "Michał Bojanowski^[Kozminski University. Corresponding author.], Dominika Czerniawska^[University of Manchester and University of Warsaw.], Wojciech Fenrich^[University of Warsaw.]"
+output: 
+  html_document:
+    toc: true
+bibliography: refs.bib
+vignette: >
+  %\VignetteIndexEntry{resource_inventory}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+library(reconqdata)
+library(dplyr)
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  error = FALSE,
+  warning = FALSE
+)
+```
+
+
+# Introduction and format
+
+This document lists inventory of academically-relevant resource types with codes, descriptions and sample quotes. In the next section each resource is documented with:
+
+- Its name in the title of the subsection
+- Its code in parentheses
+- Short textual description
+- Some example quotes identified in the interviews
+
+
+# Codes and quotes
+
+```{r resinv, results="asis"}
+reconqdata:::resource_inventory()
+```
+
+# Frequency distribution
+
+Frequency distribution of types of resources. Counts correspond to number of times a particular resource appeared in entire corpus of the interviews.
+
+```{r}
+resources %>%
+  count(code) %>%
+  left_join(reconqdata:::codes, by="code") %>%
+  arrange(desc(n)) %>%
+  select(
+    Resource = label,
+    Frequency = n
+  ) %>%
+    knitr::kable()
+```
+
+
+# References

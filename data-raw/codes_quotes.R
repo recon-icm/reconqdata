@@ -33,5 +33,4 @@ stopifnot(nrow(aj2) == 0)
 
 unlink("code_quotes.xlsx")
 
-usethis::use_data(codes, internal=TRUE, overwrite=TRUE)
-usethis::use_data(code_quotes, internal=TRUE, overwrite=TRUE)
+usethis::use_data(codes, code_quotes, internal=TRUE, overwrite=TRUE)

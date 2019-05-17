@@ -17,6 +17,8 @@ resource_inventory <- function() {
     with(d[i, , drop=FALSE], {
       cat("## ", label, " (`", code, "`)", "\n", sep="")
       cat("\n")
+      cat(text)
+      cat("\n\n")
       cat(quotes)
       cat("\n\n\n")
     } )
