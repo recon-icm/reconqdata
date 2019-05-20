@@ -1,4 +1,4 @@
-files=reconqdata resource_inventory
+files=data_description resource_inventory
 
 default: $(files:=.html)
 

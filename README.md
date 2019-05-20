@@ -1,22 +1,17 @@
-Data from a qualitative study on collaboration in science
-================
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# Data from a qualitative study on collaboration in science
+
 Michał Bojanowski (*Kozminski Univeristy*), Dominika Czerniawska
 (*University of Manchester* and *University of Warsaw*), Wojciech
 Fenrich (*University of Warsaw*)
 
-  - [Data collection](#data-collection)
-  - [Data structure](#data-structure)
-      - [Node data](#node-data)
-      - [Collaboration networks](#collaboration-networks)
-      - [Resource “flow” networks](#resource-flow-networks)
-  - [Example](#example)
-  - [Download links](#download-links)
-  - [Installation](#installation)
-  - [Acknowledgements](#acknowledgements)
-  - [License](#license)
-  - [Citing](#citing)
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+> Authors thank (Polish) [National Science Centre](https://ncn.gov.pl)
+> for support through SONATA grant 2012/07/D/HS6/01971 for the project
+> *Dynamics of Competition and Collaboration in Science: Individual
+> Strategies, Collaboration Networks, and Organizational Hierarchies*
+> (<http://recon.icm.edu.pl>).
 
 <!-- badges: start -->
 
@@ -252,12 +247,6 @@ remotes::install_github("recon-icm/reconqdata")
 ```
 
 ## Acknowledgements
-
-Authors thank (Polish) [National Science Centre](https://ncn.gov.pl) for
-support through SONATA grant 2012/07/D/HS6/01971 for the project
-*Dynamics of Competition and Collaboration in Science: Individual
-Strategies, Collaboration Networks, and Organizational Hierarchies*
-(<http://recon.icm.edu.pl>).
 
 ## License
 

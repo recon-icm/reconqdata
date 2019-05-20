@@ -1,14 +1,17 @@
 ---
-title: "Data from a qualitative study on collaboration in science"
-author: "Michał Bojanowski (*Kozminski Univeristy*), Dominika Czerniawska (*University of Manchester* and *University of Warsaw*), Wojciech Fenrich (*University of Warsaw*)"
-output: 
-  github_document:
-    toc: true
+output: github_document
 editor_options: 
   chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+
+# Data from a qualitative study on collaboration in science
+
+Michał Bojanowski (*Kozminski Univeristy*), Dominika Czerniawska (*University of Manchester* and *University of Warsaw*), Wojciech Fenrich (*University of Warsaw*)
+
+> Authors thank (Polish) [National Science Centre](https://ncn.gov.pl) for support through SONATA grant 2012/07/D/HS6/01971 for the project *Dynamics of Competition and Collaboration  in Science: Individual Strategies, Collaboration Networks, and Organizational Hierarchies* (http://recon.icm.edu.pl).
 
 ```{r, include = FALSE}
 library(reconqdata)
@@ -210,9 +213,8 @@ remotes::install_github("recon-icm/reconqdata")
 
 
 
-## Acknowledgements
 
-Authors thank (Polish) [National Science Centre](https://ncn.gov.pl) for support through SONATA grant 2012/07/D/HS6/01971 for the project *Dynamics of Competition and Collaboration  in Science: Individual Strategies, Collaboration Networks, and Organizational Hierarchies* (http://recon.icm.edu.pl).
+
 
 
 ## License
