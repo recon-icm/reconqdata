@@ -5,4 +5,6 @@
 # roxygen namespace tags. Modify with care!
 ## usethis namespace: start
 ## usethis namespace: end
+#' @import dplyr
+#' @importFrom rlang .data
 NULL

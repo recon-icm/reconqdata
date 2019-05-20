@@ -1,10 +1,10 @@
 resource_inventory_data <- function() {
   code_quotes %>%
-    mutate(
+    dplyr::mutate(
       quote = gsub("\\(In.+\\)$", "", trimws(quote))
     ) %>%
-    group_by(code) %>%
-    summarise(
+    dplyr::group_by(.data$code) %>%
+    dplyr::summarise(
       quotes = paste(paste0("> ", quote), collapse="\n\n")
     ) %>%
     left_join(

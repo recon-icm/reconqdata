@@ -10,9 +10,16 @@ Authors@R: c(
 Description: Egocentric network data from a qualitative study on collaboration in science conducted in the RECON project.
 URL: https://recon.icm.edu.pl
 Depends: R (>= 3.6.0)
+Imports: dplyr, rlang
 Suggests: 
     datamodelr,
     knitr,
+    bookdown,
+    DiagrammeR,
+    rsvg,
+    DiagrammeRsvg,
+    magick,
+    tidyr,
     rmarkdown
 Remotes: bergant/datamodelr
 License: MIT + file LICENSE
